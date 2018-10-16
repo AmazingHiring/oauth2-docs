@@ -63,6 +63,30 @@ If everything is ok, you'll get response with access and refresh tokens:
 }
 ```
 
+## Refreshing access token
+```
+POST https://search.amazinghiring.com/o/token
+```
+
+with form-encoded data:
+
+```
+refresh_token: ${REFRESH_TOKOEN}
+grant_type: refresh_token
+```
+
+If everything is ok, you'll get response with new access and new refresh tokens:
+
+```
+{
+    "access_token": "ACCESS_TOKEN",
+    "token_type": "Bearer",
+    "expires_in": 36000,
+    "refresh_token": "REFRESH_TOKEN",
+}
+```
+
+
 ## Requesting API using oAuth2.0 access token
 
 The token key should be included in the `Authorization` header.
