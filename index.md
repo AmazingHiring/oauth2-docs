@@ -5,7 +5,7 @@
 ## Urls
 
 | Type                              | Url                                              |
-|-----------------------------------|:------------------------------------------------:|
+|-----------------------------------|--------------------------------------------------|
 | Authorization                     | https://search.amazinghiring.com/o/authorize     |
 | Get or refresh token              | https://search.amazinghiging.com/o/token         |
 | Revoke token                      | https://search.amazinghiging.com/o/revoke_token/ |
