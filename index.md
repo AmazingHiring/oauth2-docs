@@ -62,3 +62,14 @@ If everything is ok, you'll get response with access and refresh tokens:
     "scope": "folders candidates profiles"
 }
 ```
+
+## Requesting API using oAuth2.0 access token
+
+The token key should be included in the `Authorization` header.
+The key should be prefixed by the string literal "Bearer", with whitespace separating the two strings. For example:
+
+```
+   Authorization: Bearer a0b1c2d3e4f5
+```
+
+[API v6 documentation](https://amazinghiring.github.io/api-v6-docs/)
