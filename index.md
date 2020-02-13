@@ -6,8 +6,8 @@
 
 | Type                              | Url                                              |
 |-----------------------------------|--------------------------------------------------|
-| Authorization                     | https://search.amazinghiring.com/o/authorize     |
-| Get or refresh token              | https://search.amazinghiging.com/o/token         |
+| Authorization                     | https://search.amazinghiring.com/o/authorize/    |
+| Get or refresh token              | https://search.amazinghiging.com/o/token/        |
 | Revoke token                      | https://search.amazinghiging.com/o/revoke_token/ |
 
 ## Requesting authorization
@@ -36,7 +36,7 @@ https://sample.acme.com/redirect_url?state=random_state_string&code=${CODE}
 ## Getting access token
 
 ```
-POST https://search.amazinghiring.com/o/token
+POST https://search.amazinghiring.com/o/token/
 ```
 
 with form-encoded data:
@@ -48,7 +48,7 @@ grant_type: authorization_code
 ```
 
 ```
-curl 'https://search.amazinghiring.com/o/token' -H 'Accept: */*' --data 'code=${CODE}&redirect_uri=https%3A%2F%2Fsample.acme.com%2Fredirect_url&grant_type=authorization_code'
+curl 'https://search.amazinghiring.com/o/token/' -H 'Accept: */*' --data 'code=${CODE}&redirect_uri=https%3A%2F%2Fsample.acme.com%2Fredirect_url&grant_type=authorization_code'
 ```
 
 If everything is ok, you'll get response with access and refresh tokens:
@@ -65,7 +65,7 @@ If everything is ok, you'll get response with access and refresh tokens:
 
 ## Refreshing access token
 ```
-POST https://search.amazinghiring.com/o/token
+POST https://search.amazinghiring.com/o/token/
 ```
 
 with form-encoded data:
