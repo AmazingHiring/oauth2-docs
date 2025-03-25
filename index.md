@@ -99,6 +99,7 @@ The key should be prefixed by the string literal "Bearer", with whitespace separ
 ## Revoke token 
 
 To request revoke token you need to insert a refresh token the header
+
 For example:
 ```
 curl -X POST https://search.amazinghiring.com/o/revoke_token/ \
