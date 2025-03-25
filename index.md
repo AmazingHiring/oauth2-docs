@@ -7,8 +7,8 @@
 | Type                              | Url                                              |
 |-----------------------------------|--------------------------------------------------|
 | Authorization                     | https://search.amazinghiring.com/o/authorize/    |
-| Get or refresh token              | https://search.amazinghiging.com/o/token/        |
-| Revoke token                      | https://search.amazinghiging.com/o/revoke_token/ |
+| Get or refresh token              | https://search.amazinghiring.com/o/token/        |
+| Revoke token                      | https://search.amazinghiring.com/o/revoke_token/ |
 
 ## Requesting authorization
 
@@ -94,6 +94,16 @@ The key should be prefixed by the string literal "Bearer", with whitespace separ
 
 ```
    Authorization: Bearer a0b1c2d3e4f5
+```
+
+## Revoke token 
+
+To request revoke token you need to insert a refresh token the header
+For example:
+```
+curl -X POST https://search.amazinghiring.com/o/revoke_token/ \
+ -H 'Accept: */*' \
+ --data 'token=<REFRESH_TOKEN>&redirect_uri=<REDIRECT_URI>&grant_type=authorization_code&client_id=<CLIENT_ID>&client_secret=<CLIENT_SECRET>'
 ```
 
 [API v6 documentation](https://amazinghiring.github.io/api-v6-docs/)
